@@ -24,5 +24,9 @@ app.use('/api/users', userRoutes);
 app.use('/api/matches', matchRoutes);
 app.use('/api/announcements', announcementRoutes);
 
+app.use('/',(req,res)=>{
+    res.send({message:"Hello from Backend"});
+})
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
